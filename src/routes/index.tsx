@@ -7,6 +7,7 @@ import {
   Check,
   ChevronRight,
   HeartHandshake,
+  HeartPulse,
   MapPin,
   Menu,
   MessageCircleHeart,
@@ -15,7 +16,6 @@ import {
   Smile,
   Sparkles,
   Stethoscope,
-  Tooth,
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,7 +44,7 @@ const services = [
   { icon: ShieldCheck, title: "Preventive Care", description: "Care focused on maintaining healthy teeth and gums." },
   { icon: Baby, title: "Children's Dental Care", description: "Friendly dental care designed with younger patients in mind." },
   { icon: Sparkles, title: "Cosmetic Dentistry", description: "Smile-focused dental treatments and cosmetic care." },
-  { icon: Tooth, title: "Restorative Dentistry", description: "Dental care focused on restoring damaged or missing teeth." },
+  { icon: HeartPulse, title: "Restorative Dentistry", description: "Dental care focused on restoring damaged or missing teeth." },
   { icon: MessageCircleHeart, title: "Dental Consultations", description: "Professional assessment and discussion of dental concerns." },
 ];
 
@@ -99,7 +99,7 @@ function Index() {
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-20 lg:px-8">
             <div className="relative"><div className="absolute -left-4 -top-4 h-full w-full rounded-[2rem] bg-secondary" aria-hidden="true" /><img src={aboutImage} alt="A dental professional welcoming a patient" width={1008} height={1104} loading="lazy" className="relative aspect-[4/4.35] max-h-[570px] w-full rounded-[2rem] object-cover" /></div>
             <div><p className="text-sm font-bold uppercase text-primary">About Siri Family Dental</p><h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">Comfortable Dental Care for You and Your Family</h2><p className="mt-6 text-lg leading-8 text-muted-foreground">Siri Family Dental provides dental care in May Pen, with a focus on creating a comfortable and welcoming experience for every patient and family who visits.</p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">{[[Smile,"Friendly Environment"],[HeartHandshake,"Family-Focused Care"],[MapPin,"Convenient May Pen Location"]].map(([Icon,label]) => { const BenefitIcon = Icon; return <div key={String(label)} className="flex items-center gap-3 sm:block"><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-secondary text-primary sm:mb-3"><BenefitIcon className="size-5" /></span><span className="text-sm font-bold leading-5">{String(label)}</span></div>})}</div>
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">{[{ icon: Smile, label: "Friendly Environment" }, { icon: HeartHandshake, label: "Family-Focused Care" }, { icon: MapPin, label: "Convenient May Pen Location" }].map(({ icon: BenefitIcon, label }) => <div key={label} className="flex items-center gap-3 sm:block"><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-secondary text-primary sm:mb-3"><BenefitIcon className="size-5" /></span><span className="text-sm font-bold leading-5">{label}</span></div>)}</div>
               <Button asChild variant="outline" className="mt-9 h-12 rounded-xl border-primary/30 px-6 text-primary"><a href="#why-us">Learn More <ArrowRight /></a></Button>
             </div>
           </div>
@@ -111,7 +111,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="why-us" className="scroll-mt-20 py-20 sm:py-28"><div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-8"><img src={careImage} alt="A dental professional listening attentively to a patient" width={1104} height={1200} loading="lazy" className="aspect-[4/4.35] max-h-[610px] w-full rounded-[2rem] object-cover" /><div><p className="text-sm font-bold uppercase text-primary">Why Choose Siri Family Dental?</p><h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">A Comfortable Place for Your Dental Care</h2><div className="mt-9 grid gap-6 sm:grid-cols-2">{[[Smile,"Family-Friendly Environment","A welcoming experience for patients of different ages."],[MapPin,"Convenient Location","Located on Fernleigh Avenue in May Pen."],[HeartHandshake,"Patient-Focused Approach","We aim to help patients feel comfortable and listened to."],[Phone,"Easy Appointment Contact","Patients can contact the clinic directly by phone."]].map(([Icon,title,text]) => { const FeatureIcon=Icon; return <div key={String(title)} className="flex gap-4"><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent text-accent-foreground"><FeatureIcon className="size-5" /></span><div><h3 className="font-bold">{String(title)}</h3><p className="mt-1 text-sm leading-6 text-muted-foreground">{String(text)}</p></div></div>})}</div><Button asChild size="lg" className="mt-9 h-13 rounded-xl px-7 text-base font-bold"><a href="tel:+18767746645"><CalendarDays /> Book an Appointment</a></Button></div></div></section>
+        <section id="why-us" className="scroll-mt-20 py-20 sm:py-28"><div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-8"><img src={careImage} alt="A dental professional listening attentively to a patient" width={1104} height={1200} loading="lazy" className="aspect-[4/4.35] max-h-[610px] w-full rounded-[2rem] object-cover" /><div><p className="text-sm font-bold uppercase text-primary">Why Choose Siri Family Dental?</p><h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">A Comfortable Place for Your Dental Care</h2><div className="mt-9 grid gap-6 sm:grid-cols-2">{[{ icon: Smile, title: "Family-Friendly Environment", text: "A welcoming experience for patients of different ages." }, { icon: MapPin, title: "Convenient Location", text: "Located on Fernleigh Avenue in May Pen." }, { icon: HeartHandshake, title: "Patient-Focused Approach", text: "We aim to help patients feel comfortable and listened to." }, { icon: Phone, title: "Easy Appointment Contact", text: "Patients can contact the clinic directly by phone." }].map(({ icon: FeatureIcon, title, text }) => <div key={title} className="flex gap-4"><span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent text-accent-foreground"><FeatureIcon className="size-5" /></span><div><h3 className="font-bold">{title}</h3><p className="mt-1 text-sm leading-6 text-muted-foreground">{text}</p></div></div>)}</div><Button asChild size="lg" className="mt-9 h-13 rounded-xl px-7 text-base font-bold"><a href="tel:+18767746645"><CalendarDays /> Book an Appointment</a></Button></div></div></section>
 
         <section id="faq" className="scroll-mt-20 bg-secondary/60 py-16"><div className="mx-auto grid max-w-7xl gap-8 px-5 md:grid-cols-3 lg:px-8"><div><p className="text-sm font-bold uppercase text-primary">Helpful details</p><h2 className="mt-3 text-3xl font-bold">Plan your visit</h2></div><div><h3 className="font-bold">When are you open?</h3><p className="mt-2 leading-7 text-muted-foreground">Monday to Saturday, 9:00 AM – 5:00 PM. Closed Sunday.</p></div><div><h3 className="font-bold">How can I book?</h3><p className="mt-2 leading-7 text-muted-foreground">Call us directly at <a className="font-semibold text-primary" href="tel:+18767746645">+1 876-774-6645</a> to arrange an appointment.</p></div></div></section>
 
