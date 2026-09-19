@@ -25,7 +25,13 @@ Build a warm, trustworthy, mobile-first homepage for Siri Family Dental using on
    - Simple dental icons, “Learn More” links, and restrained hover movement.
    - No added procedures, promises, qualifications, or clinical claims.
 
-5. **Contact close and footer**
+5. **Why Choose Siri Family Dental section**
+   - Modern split layout with a large professional dental image on the left.
+   - Heading: “A Comfortable Place for Your Dental Care”.
+   - Four concise icon-led points using the supplied wording: Family-Friendly Environment, Convenient Location, Patient-Focused Approach, and Easy Appointment Contact.
+   - “Book an Appointment” action with no exaggerated or unsupported claims.
+
+6. **Contact close and footer**
    - Reinforce the appointment and call actions.
    - Display the supplied address, phone number, and opening hours.
    - Keep all contact actions usable on mobile.
