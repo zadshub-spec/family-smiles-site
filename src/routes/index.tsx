@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/siri-family-dental-hero.jpg";
 import aboutImage from "@/assets/siri-family-dental-about.jpg";
 import careImage from "@/assets/siri-family-dental-care.jpg";
-import logoAsset from "@/assets/siri-family-dental-logo.png.asset.json";
+import logoAsset from "@/assets/siri-family-dental-logo-2026.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,7 +61,7 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#home" className="flex items-center gap-3" aria-label="Siri Family Dental home">
-            <img src={logoAsset.url} alt="" width={48} height={48} className="size-12 shrink-0 rounded-full border border-border bg-card object-cover" />
+            <img src={logoAsset.url} alt="" width={56} height={56} className="size-14 shrink-0 rounded-full border border-border bg-card object-cover" />
             <span><strong className="block font-display text-lg leading-none text-foreground">Siri Family Dental</strong><span className="mt-1 block text-xs font-semibold text-primary">May Pen, Jamaica</span></span>
           </a>
           <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
@@ -119,7 +119,7 @@ function Index() {
         <section id="contact" className="scroll-mt-20 bg-primary py-16 text-primary-foreground"><div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 lg:flex-row lg:items-center lg:px-8"><div><p className="text-sm font-bold uppercase opacity-80">Ready when you are</p><h2 className="mt-3 text-3xl font-bold sm:text-4xl">Let&apos;s take care of your smile.</h2><p className="mt-3 max-w-2xl opacity-85">Call Siri Family Dental to book an appointment or ask about your dental care needs.</p></div><Button asChild size="lg" variant="secondary" className="h-14 shrink-0 rounded-xl px-7 text-base font-bold"><a href="tel:+18767746645"><Phone /> Call +1 876-774-6645</a></Button></div></section>
       </main>
 
-      <footer className="bg-foreground py-14 text-background"><div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3 lg:px-8"><div><div className="flex items-center gap-3"><img src={logoAsset.url} alt="" width={48} height={48} loading="lazy" className="size-12 rounded-full border border-background/20 object-cover" /><strong className="font-display text-xl">Siri Family Dental</strong></div><p className="mt-4 max-w-xs text-sm leading-6 opacity-70">Comfortable and welcoming dental care for you and your family in May Pen.</p></div><div><h2 className="font-bold">Visit us</h2><address className="mt-4 text-sm not-italic leading-7 opacity-70">National Bank, Fernleigh Avenue Upstairs<br />45 A Main Street<br />May Pen, Jamaica</address></div><div><h2 className="font-bold">Contact & hours</h2><a href="tel:+18767746645" className="mt-4 block text-sm font-semibold text-accent">+1 876-774-6645</a><p className="mt-2 text-sm leading-7 opacity-70">Monday–Saturday: 9:00 AM–5:00 PM<br />Sunday: Closed</p></div></div><div className="mx-auto mt-12 max-w-7xl border-t border-background/15 px-5 pt-6 text-xs opacity-55 lg:px-8">© {new Date().getFullYear()} Siri Family Dental. May Pen, Jamaica.</div></footer>
+      <footer className="bg-foreground py-14 text-background"><div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3 lg:px-8"><div><div className="flex items-center gap-3"><img src={logoAsset.url} alt="" width={56} height={56} loading="lazy" className="size-14 rounded-full border border-background/20 object-cover" /><strong className="font-display text-xl">Siri Family Dental</strong></div><p className="mt-4 max-w-xs text-sm leading-6 opacity-70">Comfortable and welcoming dental care for you and your family in May Pen.</p></div><div><h2 className="font-bold">Visit us</h2><address className="mt-4 text-sm not-italic leading-7 opacity-70">National Bank, Fernleigh Avenue Upstairs<br />45 A Main Street<br />May Pen, Jamaica</address></div><div><h2 className="font-bold">Contact & hours</h2><a href="tel:+18767746645" className="mt-4 block text-sm font-semibold text-accent">+1 876-774-6645</a><p className="mt-2 text-sm leading-7 opacity-70">Monday–Saturday: 9:00 AM–5:00 PM<br />Sunday: Closed</p></div></div><div className="mx-auto mt-12 max-w-7xl border-t border-background/15 px-5 pt-6 text-xs opacity-55 lg:px-8">© {new Date().getFullYear()} Siri Family Dental. May Pen, Jamaica.</div></footer>
     </div>
   );
 }
